@@ -120,7 +120,7 @@ Repeat `select disk`, `detail disk` and `offline disk` for each drive that isn't
 select disk <target>
 detail disk
 list volume
-select volume 2
+select volume <EFI>
 assign letter=S
 list volume
 exit
@@ -128,7 +128,7 @@ exit
 format C: /fs:ntfs /q /v:Windows
 ```
 
-Volume 2 was the 512 MB FAT32 System partition on this disk. Check `list volume` on your own system; numbers vary.
+Volume ``<EFI>`` was the 512 MB FAT32 System partition on the target disk (Volume 2 on this machine). Find it with `list volume`; numbers vary.
 
 ### 6. Apply the image
 
